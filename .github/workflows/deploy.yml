@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # ✅ Ensure latest version
+        uses: actions/checkout@v4
         
       - name: Install Node.js
-        uses: actions/setup-node@v4  # ✅ Updated to v4
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
@@ -34,7 +34,7 @@ jobs:
         run: npm run build
           
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2  # ✅ Corrected version for GitHub Pages
+        uses: actions/upload-pages-artifact@v3  # ✅ Correct action for Pages
         with:
           path: ./build/  # ✅ Ensure correct directory is uploaded
 
@@ -53,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2  # ✅ Corrected version for deployment
+        uses: actions/deploy-pages@v4
