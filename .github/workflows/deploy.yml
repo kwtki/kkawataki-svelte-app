@@ -35,11 +35,12 @@ jobs:
       - name: Build site
         run: npm run build
           
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1  # ✅ Corrected action for GitHub Pages
+      - name: Upload artifact (GitHub Pages)
+        uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
-          path: './build/'  # ✅ Ensures correct directory
-          
+          name: github-pages
+          path: './build/'  # ✅ Ensure this is the correct directory
+
   deploy-pages:
     needs: build-site
     runs-on: ubuntu-latest
@@ -53,6 +54,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4  # ✅ Ensure the artifact is downloaded
+        with:
+          name: github-pages
+          path: './build/'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2  # ✅ Correct GitHub Pages deployment action
