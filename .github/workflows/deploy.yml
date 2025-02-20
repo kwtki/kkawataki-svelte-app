@@ -53,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2  # ✅ Correct GitHub Pages deployment action
+        uses: actions/deploy-pages@v3  # ✅ Correct GitHub Pages deployment action
