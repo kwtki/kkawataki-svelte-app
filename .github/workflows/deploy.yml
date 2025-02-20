@@ -39,7 +39,8 @@ jobs:
         uses: actions/upload-artifact@v4  # ✅ Ensure correct action version
         with:
           name: github-pages  # ✅ Ensure artifact name is set correctly
-          path: build/  # ✅ Ensure correct directory is uploaded
+          path: ./build/  # ✅ Ensure correct directory is uploaded
+          retention-days: 1  # ✅ Keep artifact only for 1 day to prevent issues
 
   deploy-pages:
     needs: build-site
@@ -58,7 +59,10 @@ jobs:
         uses: actions/download-artifact@v4  # ✅ Ensure the artifact is downloaded
         with:
           name: github-pages  # ✅ Ensure artifact name matches upload step
-          path: build/  # ✅ Ensure correct directory
+          path: ./build/  # ✅ Ensure correct directory
+
+      - name: Display build contents (debugging)
+        run: ls -R ./build/  # ✅ Check if files exist before deploying
 
       - name: Deploy to GitHub Pages
         id: deployment
