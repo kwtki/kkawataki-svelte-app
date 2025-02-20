@@ -36,10 +36,9 @@ jobs:
         run: npm run build
           
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v1  # Fix: Correct action version
         with:
-          name: github-pages
-          path: 'build/'
+          path: 'build/'  # Ensure this is correct
           
   deploy-pages:
     needs: build-site
