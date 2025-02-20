@@ -28,25 +28,21 @@ jobs:
         run: npm install
         
       - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          enablement: true  # Ensure GitHub Pages is enabled
+        uses: actions/configure-pages@v4  # ✅ Ensure GitHub Pages is enabled
       
       - name: Build site
         run: npm run build
           
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-artifact@v4  # ✅ Ensure correct action version
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2.0.0  # ✅ Correct action for Pages
         with:
-          name: github-pages  # ✅ Ensure artifact name is set correctly
           path: ./build/  # ✅ Ensure correct directory is uploaded
-          retention-days: 1  # ✅ Keep artifact only for 1 day to prevent issues
 
   deploy-pages:
     needs: build-site
     runs-on: ubuntu-latest
 
-    permissions:  # ✅ Ensure correct permissions for deployment
+    permissions:
       pages: write
       id-token: write
 
@@ -55,15 +51,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@latest  # ✅ Ensure the artifact is downloaded
-        with:
-          name: github-pages  # ✅ Ensure artifact name matches upload step
-          path: ./build/  # ✅ Ensure correct directory
-
-      - name: Display build contents (debugging)
-        run: ls -R ./build/  # ✅ Check if files exist before deploying
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2  # ✅ Correct GitHub Pages deployment action
