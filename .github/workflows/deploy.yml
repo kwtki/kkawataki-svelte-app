@@ -9,6 +9,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write  # Ensure GitHub Actions can configure Pages
 
 jobs:
   build-site:
