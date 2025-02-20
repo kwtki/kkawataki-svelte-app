@@ -35,11 +35,11 @@ jobs:
       - name: Build site
         run: npm run build
           
-      - name: Upload artifact (GitHub Pages)
-        uses: actions/upload-artifact@v4  # ✅ Updated to v4
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-artifact@v4  # ✅ Ensure correct action version
         with:
-          name: github-pages
-          path: './build/'  # ✅ Ensure this is the correct directory
+          name: github-pages  # ✅ Ensure artifact name is set correctly
+          path: build/  # ✅ Ensure correct directory is uploaded
 
   deploy-pages:
     needs: build-site
@@ -57,8 +57,8 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4  # ✅ Ensure the artifact is downloaded
         with:
-          name: github-pages
-          path: './build/'
+          name: github-pages  # ✅ Ensure artifact name matches upload step
+          path: build/  # ✅ Ensure correct directory
 
       - name: Deploy to GitHub Pages
         id: deployment
