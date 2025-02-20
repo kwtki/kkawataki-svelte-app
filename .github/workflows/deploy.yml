@@ -56,7 +56,7 @@ jobs:
     
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4  # ✅ Ensure the artifact is downloaded
+        uses: actions/download-artifact@latest  # ✅ Ensure the artifact is downloaded
         with:
           name: github-pages  # ✅ Ensure artifact name matches upload step
           path: ./build/  # ✅ Ensure correct directory
