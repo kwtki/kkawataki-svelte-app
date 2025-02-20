@@ -3,6 +3,8 @@
     import { marked } from "marked";
     import markdown from "$lib/markdown/goal.md?raw";
 
+    export let title = "main"
+
     const md = marked.parse(markdown);
 
     onMount(() => {
@@ -15,6 +17,11 @@
         });
     });
 </script>
+
+<svelte:head>
+   <title>{title}</title>
+</svelte:head>
+
 
 <!-- GitHub Markdown styling applied -->
 <article class="container">
