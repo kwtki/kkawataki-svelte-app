@@ -9,8 +9,8 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;  /* Default padding for small screens (sm:px-6) */
-    padding-right: 1.5rem;
+    padding-left: 0.5rem;  /* Default padding for small screens (sm:px-6) */
+    padding-right: 0.5rem;
 }
 
 /* Medium screens (sm) and up */
