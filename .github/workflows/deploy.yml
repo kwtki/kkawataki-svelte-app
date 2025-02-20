@@ -34,7 +34,7 @@ jobs:
         run: npm run build
           
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2.0.0  # ✅ Correct action for Pages
+        uses: actions/upload-pages-artifact@v4  # ✅ Correct action for Pages
         with:
           path: ./build/  # ✅ Ensure correct directory is uploaded
 
