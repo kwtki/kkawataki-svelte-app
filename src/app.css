@@ -1,0 +1,30 @@
+@import "github-markdown-css/github-markdown.css";
+
+:root {
+    background-color: #0d1117;
+    padding-top: 3rem;
+}
+
+/* Container styles */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;  /* Default padding for small screens (sm:px-6) */
+    padding-right: 1.5rem;
+}
+
+/* Medium screens (sm) and up */
+@media (min-width: 640px) {
+    .container {
+        padding-left: 1.5rem; /* sm:px-6 */
+        padding-right: 1.5rem;
+    }
+}
+
+/* Large screens (lg) and up */
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 10rem; /* lg:px-8 */
+        padding-right: 10rem;
+    }
+}
