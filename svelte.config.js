@@ -12,9 +12,6 @@ const config = {
 			assets: 'build',
 			fallback: 'index.html'
 		}),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/kkawataki-svelte-app' : ''
-		},
 		prerender: {
 			entries: ['*'] // Ensures all pages are pre-rendered for static deployment
 		}
