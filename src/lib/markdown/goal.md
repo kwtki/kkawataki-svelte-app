@@ -17,7 +17,7 @@ This <del>**[line](/#)**</del> indicates that I have finally purchased the item.
 | Item                                  | 優先度 / Priority |
 | --------------------------------------- | ------------------- |
 | <del>[Xperia 5 VI][Xperia_5_VI]</del> | ⭐⭐⭐⭐⭐        |
-| [DJI Mic 2][DJI_Mic_2]                | ⭐⭐⭐⭐          |
+| [DJI Mic 2][DJI_Mic_2]                | ⭐⭐⭐⭐⭐          |
 | [ILCE-7CM2 S][ILCE-7CM2_S]            | ⭐⭐              |
 | [SEL2070G]                            | ⭐⭐              |
 
@@ -27,7 +27,7 @@ This <del>**[line](/#)**</del> indicates that I have finally purchased the item.
 
 | Item                                        | 優先度 / Priority |
 | --------------------------------------------- | ------------------- |
-| **小型二輪免許 (125cc License)**            | ⭐⭐⭐⭐⭐        |
+| **[小型二輪免許 (125cc License)][小型二輪免許]**            | ⭐⭐⭐⭐⭐        |
 | **[Honda CT125][black_CT125]**              | ⭐⭐⭐⭐⭐        |
 | **[Rear Box][givi_rear_box]**               | ⭐⭐⭐⭐⭐        |
 | **バイクロック / Motorcycle Lock**          | ⭐⭐⭐⭐          |
@@ -39,6 +39,7 @@ This <del>**[line](/#)**</del> indicates that I have finally purchased the item.
 
 
 <!--- References -->
+[小型二輪免許]: # "¥5000-¥6000"
 
 [Xperia_5_VI]: https://www.amazon.co.jp/dp/B0CHV45K6W?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 [DJI_Mic_2]: https://www.amazon.co.jp/dp/B0CFZX734J/?coliid=I3Q8SY80QZGBVD&colid=2NQW6V853UHL6&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
