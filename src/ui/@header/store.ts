@@ -9,11 +9,11 @@ export const MenuItems = [
         name: "main",
         href: "/",
     },
-    {
-        type: EType.link,
-        name: "pictures",
-        href: "/pictures",
-    },
+    // {
+    //     type: EType.link,
+    //     name: "pictures",
+    //     href: "/pictures",
+    // },
     {
         type: EType.link,
         name: "list",
