@@ -1,0 +1,28 @@
+/* Reset list styles overridden by Tailwind */
+.markdown-body ul,
+.markdown-body ol {
+    all: revert !important; /* Resets to default browser styles */
+    margin: revert !important;
+    padding: revert !important;
+    list-style: revert !important;
+}
+
+/* Ensure list items are visible */
+.markdown-body li {
+    display: list-item !important;
+}
+
+/* Optional: Improve spacing */
+.markdown-body ul {
+    padding-left: 1.5rem !important;
+}
+
+.markdown-body ol {
+    padding-left: 1.5rem !important;
+    list-style-type: decimal !important; /* Ensures numbers are visible */
+}
+
+/* Optional: Add disc bullets for unordered lists */
+.markdown-body ul {
+    list-style-type: disc !important;
+}
