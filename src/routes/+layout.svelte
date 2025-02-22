@@ -1,7 +1,7 @@
 <script lang="ts">
     let { children } = $props();
     import "../app.css";
-    import Header from "../ui/@header/Header.svelte";
+    import Header from "../lib/@component/@header/Header.svelte";
 
     import { page } from "$app/state";
 

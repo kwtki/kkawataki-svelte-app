@@ -55,11 +55,12 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
             {#each MenuItems as item}
-                <button
-                    on:click={() => {goToPage(item.href)}}
-                    class="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-                    >{item.name}</button
-                >
+            <button
+            on:click={() => goToPage(item.href)}
+            class="text-sm font-semibold leading-6 text-gray-900 dark:text-white cursor-pointer"
+        >
+            {item.name}
+        </button>
             {/each}
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
