@@ -5,6 +5,7 @@
     import { onMount } from "svelte";
     import { marked } from "marked";
     import markdown from "$lib/markdown/goal.md?raw";
+    import ProgressBar from "$lib/@component/ProgressBar.svelte";
 
     const md = marked.parse(markdown);
 
@@ -21,6 +22,7 @@
 
 <!-- GitHub Markdown styling applied -->
 <article class="container">
+    <ProgressBar/>
     <div class="markdown-body nullfy-style">
         {@html md}
     </div>
