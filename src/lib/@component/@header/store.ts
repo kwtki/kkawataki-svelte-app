@@ -14,9 +14,9 @@ export const MenuItems = [
     //     name: "pictures",
     //     href: "/pictures",
     // },
-    {
-        type: EType.link,
-        name: "list",
-        href: "/list",
-    },
+    // {
+    //     type: EType.link,
+    //     name: "list",
+    //     href: "/list",
+    // },
 ];

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import "./nullify.css"
-    import "./github.css"; // Import last to ensure priority
+    import "$lib/style/nullify.css";
+    import "$lib/style/github.css";// Import last to ensure priority
     
     import { onMount } from "svelte";
     import { marked } from "marked";

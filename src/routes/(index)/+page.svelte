@@ -1,24 +1,28 @@
-<script>
-    import DetailsSection from "$lib/@component/DetailsSection.svelte";
+<script lang="ts">
+  import "$lib/style/nullify.css";
+  import "$lib/style/github.css";// Import last to ensure priority
+  
+  import { onMount } from "svelte";
+  import { marked } from "marked";
+  import markdown from "$lib/markdown/intro.md?raw";
 
+  const md = marked.parse(markdown);
+
+  onMount(() => {
+      document.querySelectorAll(".markdown-body a").forEach(link => {
+          if (!link.hasAttribute("target")) {
+              link.setAttribute("target", "_blank");
+              link.setAttribute("rel", "noopener noreferrer");
+          }
+      });
+  });
 </script>
 
 
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-  <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-  <div class="mx-auto max-w-4xl">
-    <!-- Responsive YouTube Embed -->
-    <div class="relative w-full pt-[56.25%]">
-      <iframe
-        class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-        src="https://www.youtube.com/embed/yo1vacRLWZU"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-</div>
+<!-- GitHub Markdown styling applied -->
+<article class="container">
 
-<!-- <DetailsSection/> -->
+  <div class="markdown-body nullfy-style">
+      {@html md}
+  </div>
+</article>
