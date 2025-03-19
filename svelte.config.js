@@ -13,7 +13,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		prerender: {
-			entries: ['*'] // Ensures all pages are pre-rendered for static deployment
+			handleHttpError: 'warn' // Avoids breaking on 404 errors
 		}
 	}
 };
